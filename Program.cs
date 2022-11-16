@@ -15,28 +15,24 @@ namespace конвертер
 
         static void Main()
         {
-            files.viborInput();
+            files.deserizal();
+            changetext changetext = new changetext();
+            changetext.changeText();
             ConsoleKeyInfo key = Console.ReadKey();
-            if (key.Key == ConsoleKey.F1)
-            {
-                files files = new files();
-                files.viborFormata(list());
-            }
             if (key.Key == ConsoleKey.Escape) { Console.Clear(); Console.WriteLine("вы завершили программу"); return; }
         }
-
-        static List<human> list()
-        {
-            human human = new human();
-            List<human> humans = new List<human>();
-            human human1 = new human("алик", 17, "белый");
-            human human2 = new human("суета", 10, "черный");
-            human human3 = new human("анастасьон", 22, "фиол");
-            humans.Add(human1);
-            humans.Add(human2);
-            humans.Add(human3);
-            return humans;
-        }
+        //static List<human> list()
+        //{
+        //    human human = new human();
+        //    List<human> humans = new List<human>();
+        //    human human1 = new human("алик", 17, "белый");
+        //    human human2 = new human("суета", 10, "черный");
+        //    human human3 = new human("анастасьон", 22, "фиол");
+        //    humans.Add(human1);
+        //    humans.Add(human2);
+        //    humans.Add(human3);
+        //    return humans;
+        //}
     }
 }
 
